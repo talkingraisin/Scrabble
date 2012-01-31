@@ -12,45 +12,46 @@ public class Shell
     */
    
    
-   
-    while()
-    {
-        System.out.println(“Enter command: “);
-        String command = System.in.nextLine();
-       
-        // giant dfa
-        if (“start”.equals(command))
-        {
-
-        }
-        else if (“forfeit”.equals(command))
-        {
-           
-        }
-        else if (command.startsWith(“move”))
-        {
-
-        }
-        else if (“scramble”.equals(command))
-        {
-
-        }
-        else if (“pass”.equals(command))
-        {
-
-        }
-        else if (“getscore”.equals(command))
-        {
-
-        }
-        else if (“print”.equals(command))
-        {
-
-        }
-        else // errors
-        {
-           
-        }
-    }
+	public static void main(String[] args)
+	{
+	    while(true)
+	    {
+	        System.out.println("Enter command: ");
+	        String command = System.in.nextLine();
+	       
+	        // giant dfa
+	        if ("start".equals(command))
+	        {
+	
+	        }
+	        else if ("forfeit".equals(command))
+	        {
+	           
+	        }
+	        else if (command.startsWith("move"))
+	        {
+	
+	        }
+	        else if ("scramble".equals(command))
+	        {
+	
+	        }
+	        else if ("pass".equals(command))
+	        {
+	
+	        }
+	        else if ("getscore".equals(command))
+	        {
+	
+	        }
+	        else if ("print".equals(command))
+	        {
+	
+	        }
+	        else // errors
+	        {
+	           
+	        }
+	    }
+	}
 }
-S

@@ -1,5 +1,4 @@
 
-
 public class Move
 {
     private int direction;
@@ -13,5 +12,25 @@ public class Move
         this.i = i;
         this.j = j;
         this.direction = direction;
-
+    }
+    
+    public int getDirection()    
+	{
+		return direction;    
+  	}
+	  
+    public int getI()
+    {
+    	return i;   
+  	}
+	  
+    public int getJ()   
+    {    
+	    return j;
+    }
+	  
+    public String getWord()    
+    {
+	    return word;   
+    }
 }

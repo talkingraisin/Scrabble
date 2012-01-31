@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 public class TileBag
 {
     private HashSet<Tile> tiles;
@@ -6,10 +8,10 @@ public class TileBag
     {
 
 
-}
+    }
 
     public Tile draw()
     {
-       
+    	return null;
     }
 }

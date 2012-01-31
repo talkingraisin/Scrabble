@@ -8,5 +8,5 @@ public class Tile
     {
         this.letter = letter;
         this.point = point;
-
+    }
 }
