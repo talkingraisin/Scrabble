@@ -10,10 +10,9 @@ public class Tile
         this.point = point;
     }
     
+    // to avoid formatting issues, a point value of 10 will be shown as a lower case 'x'
     public String toString()
     {
-    	return letter + " " + point;
+    	return letter == ' ' ? "  " : Character.toUpperCase(letter) + (point == 10 ? "x" : Integer.toString(point));
     }
-    
-    
 }

@@ -1,16 +1,15 @@
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
 
 public class TileBag
 {
-	public static String tilePath = "tiles";
+	
     private Tile[] tiles;
     private int curIndex;
     
-    public TileBag()
+    public TileBag(String tilePath)
     {
     	int index = 0;
     	
@@ -87,7 +86,7 @@ public class TileBag
     // test
     public static void main(String[] args)
     {
-    	TileBag tb = new TileBag();
+    	TileBag tb = new TileBag("tiles");
     	int count = 0;
     	while (tb.size() > 0)
     	{

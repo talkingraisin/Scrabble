@@ -9,13 +9,14 @@ private Board board;
     private State state;
 
     private static String defaultBoardPath;
-   
+    public static String defaultTilePath = "tiles";
+    
     public GameEngine()
     {
         board = new Board(defaultBoardPath);
         computer = new ComputerPlayer();
         human = new HumanPlayer();
-        bag = new TileBag();       
+        bag = new TileBag(defaultTilePath);       
 
     }
     
