@@ -9,4 +9,11 @@ public class Tile
         this.letter = letter;
         this.point = point;
     }
+    
+    public String toString()
+    {
+    	return letter + " " + point;
+    }
+    
+    
 }

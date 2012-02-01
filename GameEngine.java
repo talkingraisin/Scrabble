@@ -15,10 +15,10 @@ private Board board;
         board = new Board(defaultBoardPath);
         computer = new ComputerPlayer();
         human = new HumanPlayer();
-
-bag = new TileBag();       
+        bag = new TileBag();       
 
     }
+    
     public void giveTiles()
     {
        

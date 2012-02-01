@@ -6,7 +6,7 @@ public class Square
     public Square(Tile tile, int special)
     {
     	this.tile = tile;
-	this.special = special;
+    	this.special = special;
     }
 
     public Tile getTile()

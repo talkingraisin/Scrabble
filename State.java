@@ -1,5 +1,3 @@
-
-
 public class State
 {
 	private int turn;
@@ -18,6 +16,4 @@ public class State
 	{
 	    
 	}
-	
-	
 }
