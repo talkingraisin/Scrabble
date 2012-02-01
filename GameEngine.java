@@ -1,9 +1,6 @@
 
 public class GameEngine
 {
-
-private Board board;
-    private TileBag bag;
     private ComputerPlayer computer;
     private HumanPlayer human;
     private State state;
@@ -13,11 +10,8 @@ private Board board;
     
     public GameEngine()
     {
-        board = new Board(defaultBoardPath);
         computer = new ComputerPlayer();
         human = new HumanPlayer();
-        bag = new TileBag(defaultTilePath);       
-
     }
     
     public void giveTiles()
@@ -29,7 +23,7 @@ private Board board;
      * each player to move, check the move, make the move, update everything
      * in the process, check for endgame conditions, and repeat */
 
-public void startGame()
+    public void startGame()
     {
        
     }
