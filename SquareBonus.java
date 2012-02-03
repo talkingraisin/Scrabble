@@ -1,6 +1,7 @@
 import java.util.EnumSet;
 import java.util.HashMap;
 
+/* DO NOT CHANGE THE ORDER HERE AS IT IS ESSENTIAL IN OTHER CLASSES */
 public enum SquareBonus // 0:normal 1:DW 2:TW 3:DL 4:TL
 {
     NS("  "), DW("2W"), TW("3W"), DL("2L"), TL("3L");

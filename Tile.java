@@ -14,7 +14,7 @@ public class Tile
     // to avoid formatting issues, a point value of 10 will be shown as a lower case 'x'
     public String toString()
     {
-    	return letter == BLANK ? "  " : Character.toUpperCase(letter) + (point == 10 ? "x" : Integer.toString(point));
+    	return Character.toUpperCase(letter) + (point >= 10 ? "+" : Integer.toString(point));
     }
     
     public static boolean isValidTileLetter(char letter)

@@ -11,16 +11,8 @@ import java.util.Scanner;
 
 public class TileBag
 {
-	private static final String[] DEFAULT_TILE_BAG_FORMAT = new String[]
-		{ "100", 
-	      "0 _ 2", "1 e 12 a 9 i 9 o 8 n 6 r 6 t 6 l 4 s 4 u 4",
-		  "2 d 4 g 3",
-		  "3 b 2 c 2 m 2 p 2",
-		  "4 f 2 h 2 v 2 w 2 y 2",
-		  "5 k 1",
-		  "8 j 1 x 1",
-		  "10 q 1 z 1"
-		};
+    private static final TilesFormat DEFAULT_TILES_FORMAT = TilesFormat.HASBRO;
+    
     private ArrayList<Tile> tiles;
 
     protected TileBag(String[] tileBagFormat) throws InvalidTilesFormatException
@@ -110,17 +102,19 @@ public class TileBag
             tiles.add(draw());
     }
 
-    public static TileBag getNewDefaultBag()
+    public static TileBag getNewBag(TilesFormat format)
     {
         try
         {
-            return new TileBag(DEFAULT_TILE_BAG_FORMAT);
+            return new TileBag(TilesFormat.getTilesFormat(format));
         }
         catch (InvalidTilesFormatException e)
         {
             throw new RuntimeException(e);
         }
     }
+    
+    public static TileBag getNewDefaultBag() { return getNewBag(DEFAULT_TILES_FORMAT); }
 
     public static TileBag getNewBagFromFile(String tileFormatFilename)
             throws FileNotFoundException, InvalidTilesFormatException
@@ -130,5 +124,15 @@ public class TileBag
         while (s.hasNextLine())
             lines.add(s.nextLine());
         return new TileBag(lines.toArray(new String[0]));
+    }
+    
+    // Test
+    public static void main(String[] args)
+    {
+        TileBag bag = TileBag.getNewBag(TilesFormat.RANDOM);
+        System.out.println(bag.tilesRemaining());
+        for (Tile t : bag.draw(bag.tilesRemaining()))
+            System.out.print(t + " ");
+        System.out.println();
     }
 }
