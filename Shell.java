@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /* stop */
 
 // top layer
@@ -16,10 +18,11 @@ public class Shell
    
 	public static void main(String[] args)
 	{
+		Scanner scanner = new Scanner(System.in);
 	    while(true)
 	    {
 	        System.out.println("Enter command: ");
-	        String command = System.in.nextLine();
+	        String command = scanner.nextLine();
 	       
 	        // giant dfa
 	        if ("start".equals(command))
