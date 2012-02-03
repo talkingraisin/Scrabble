@@ -4,9 +4,6 @@ public class GameEngine
     private ComputerPlayer computer;
     private HumanPlayer human;
     private State state;
-
-    private static String defaultBoardPath;
-    public static String defaultTilePath = "tiles";
     
     public GameEngine()
     {

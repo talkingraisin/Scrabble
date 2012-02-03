@@ -40,15 +40,15 @@ public class Board
 			for (int col = 0; col < COLS; col++)
 			{
 				if ("TW".equals(s[col]))
-					board[curRowIndex][col] = new Square(Square.TileType.TW);
+					board[curRowIndex][col] = new Square(Square.SquareType.TW);
 				else if ("DW".equals(s[col]))
-					board[curRowIndex][col] = new Square(Square.TileType.DW);
+					board[curRowIndex][col] = new Square(Square.SquareType.DW);
 				else if ("TL".equals(s[col]))
-					board[curRowIndex][col] = new Square(Square.TileType.TL);
+					board[curRowIndex][col] = new Square(Square.SquareType.TL);
 				else if ("DL".equals(s[col]))
-					board[curRowIndex][col] = new Square(Square.TileType.DL);
+					board[curRowIndex][col] = new Square(Square.SquareType.DL);
 				else if ("NS".equals(s[col]))
-					board[curRowIndex][col] = new Square(Square.TileType.NS);
+					board[curRowIndex][col] = new Square(Square.SquareType.NS);
 				else // error
 					throw new RuntimeException("Invalid board file");
 			}
