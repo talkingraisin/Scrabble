@@ -1,35 +1,19 @@
-public class Square
-{
-	public enum SquareType // 0:normal 1:DW 2:TW 3:DL 4:TL
-	{
-		NS("  "), DW("2W"), TW("3W"), DL("2L"), TL("3L");
-		
-		private SquareType(String name) 
-		{
-			this.name = name;
-		}
-		
-		private final String name;
-		
-		public String toString() 
-		{
-			return name;
-		}
-	}
-	
-    private SquareType special; 
-    private Tile tile;
 
-    public Square(SquareType special)
+public class Square
+{	
+    private final SquareBonus bonus; 
+    private Tile tile;
+    
+    public Square(SquareBonus bonus)
     {
     	this.tile = null;
-    	this.special = special;
+    	this.bonus = bonus;
     }
     
-    public Square(Tile tile, SquareType special)
+    public Square(Tile tile, SquareBonus bonus)
     {
     	this.tile = tile;
-    	this.special = special;
+    	this.bonus = bonus;
     }
 
     public Tile getTile()
@@ -37,9 +21,9 @@ public class Square
     	return tile;
     }
 
-    public SquareType getSpecial()
+    public SquareBonus getBonus()
     {
-    	return special;
+    	return bonus;
     }
     
     public void setTile(Tile tile)
@@ -47,4 +31,8 @@ public class Square
     	this.tile = tile;
     }
     
+    public boolean hasTile()
+    {
+    	return this.tile != null;
+    }
 }
